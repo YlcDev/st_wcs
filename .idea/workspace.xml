@@ -189,6 +189,12 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/images/user_large.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/media/video.mp4" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/media/video.webm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/packages/prod/doctrine.yaml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/routes/annotations.yaml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/routes/dev/twig.yaml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/css/animate.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/css/bootstrap.min.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/css/font-awesome.min.css" />
@@ -224,8 +230,26 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/php/mailsend.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/scss/main.css.map" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/scss/main.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/FrontPageController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Entity/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Migrations/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Repository/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/_includes/_bar.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/_includes/_contact.html.twig" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/_includes/_css.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/_includes/_developpement.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/_includes/_footer.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/_includes/_formation.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/_includes/_header.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/_includes/_histoire.html.twig" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/_includes/_js.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/_includes/_message.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/_includes/_multimedia.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/_includes/_services.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/_includes/_slider.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/_includes/_team.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/_includes/_technique.html.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/base.html.twig" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/frontpage/competences.html.twig" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/frontpage/contact.html.twig" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/frontpage/index.html.twig" />
@@ -292,12 +316,12 @@
         <entry file="file://$PROJECT_DIR$/templates/_includes/_header.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="182">
-              <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+              <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
               <folding>
                 <element signature="e#491#498#0#Twig" expanded="true" />
-                <element signature="e#635#646#0#Twig" expanded="true" />
-                <element signature="e#767#774#0#Twig" expanded="true" />
-                <element signature="e#891#898#0#Twig" expanded="true" />
+                <element signature="e#638#649#0#Twig" expanded="true" />
+                <element signature="e#770#777#0#Twig" expanded="true" />
+                <element signature="e#894#901#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -396,7 +420,7 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="83" />
+    <option name="x" value="84" />
     <option name="y" value="464" />
     <option name="width" value="1357" />
     <option name="height" value="435" />
@@ -625,15 +649,15 @@
       <option name="presentableId" value="Default" />
       <updated>1516024429167</updated>
       <workItem from="1516024430403" duration="87000" />
-      <workItem from="1516051714281" duration="3683000" />
+      <workItem from="1516051714281" duration="3704000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3770000" />
+    <option name="totallyTimeSpent" value="3791000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="83" y="464" width="1357" height="435" extended-state="0" />
+    <frame x="84" y="464" width="1357" height="435" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25323194" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -912,12 +936,12 @@
     <entry file="file://$PROJECT_DIR$/templates/_includes/_header.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
-          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
           <folding>
             <element signature="e#491#498#0#Twig" expanded="true" />
-            <element signature="e#635#646#0#Twig" expanded="true" />
-            <element signature="e#767#774#0#Twig" expanded="true" />
-            <element signature="e#891#898#0#Twig" expanded="true" />
+            <element signature="e#638#649#0#Twig" expanded="true" />
+            <element signature="e#770#777#0#Twig" expanded="true" />
+            <element signature="e#894#901#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
