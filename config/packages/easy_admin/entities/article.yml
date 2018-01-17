@@ -1,0 +1,27 @@
+easy_admin:
+    formats:
+        date: 'd/m/Y'
+        time: 'H:i'
+        datetime: 'd/m/Y \a H:i:s'
+    entities:
+        Article:
+            class: App\Entity\Article
+            label: 'Liste des articles'
+            list:
+                fields:
+                    - title
+                    - content
+                    - author
+                    - updatedAt
+            show:
+                fields:
+                    - title
+                    - content
+                    - author
+                    - updatedAt
+            form:
+                fields:
+                    - title
+                    - content
+                    - author
+                    - updatedAt
