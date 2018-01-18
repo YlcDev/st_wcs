@@ -2,4 +2,37 @@
 
 {% block body %}
 
+{% if articles is defined %}
+    {% for article in articles %}
+
+        <div class="container m-mt90 m-blog_outer m-blog_outer_full">
+           <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="m-blog_listing">
+                        <div class="m-blog_list_single">
+                            <div class="m-blog_list_img">
+                                <img src="{{ asset('uploads/images/articles/' ~ article.image) }}" class="img-responsive" alt="{{ article.image }}">
+                            </div>
+                                <div class="m-blog_list_details">
+                                    <h3>{{ article.title }} </h3>
+                                        <div class="m-blog_list_info">
+                                            <span>by: {{ article.author }}</span>  /
+                                            <span>on: {{ article.updatedAt|date("d/m/Y") }}</span>
+                                        </div>
+                                    <p>{{ article.content }}</p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% else %}
+    <section class="container">
+        <div class="row">
+    <h2>Ce ne sont pas ces articles que vous cherchez !</h2>
+        <img src="{{ asset('uploads/images/articles/meme_st.jpeg') }}" alt="stars_wars_meme" class="center-block">
+    <p>mais d'autres arrivent bientôt</p>
+        </div>
+    </section>
+    {% endfor %}
+{% endif %}
 {% endblock %}

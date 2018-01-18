@@ -9,8 +9,10 @@ easy_admin:
             label: 'Liste des articles'
             list:
                 fields:
+                    - id
                     - title
                     - content
+                    - { property: 'image', type: 'image', base_path: '%app.path.article_images%' }
                     - author
                     - updatedAt
             show:
@@ -19,9 +21,13 @@ easy_admin:
                     - content
                     - author
                     - updatedAt
+                    - { property: 'image', type: 'image', base_path: '%app.path.article_images%' }
             form:
                 fields:
                     - title
                     - content
+                    - { property: 'imageFile', type: 'vich_image', type_options: { required: true } }
+                    - { type: 'divider' }
                     - author
                     - updatedAt
+                    - { type: 'divider' }
