@@ -1,4 +1,5 @@
 easy_admin:
     design:
         menu:
+            - { label: 'Aller au blog', url: '/blog' }
             - Article
