@@ -29,5 +29,5 @@ easy_admin:
                     - { property: 'imageFile', type: 'vich_image', type_options: { required: true } }
                     - { type: 'divider' }
                     - author
-                    - updatedAt
+                    - { property: 'updatedAt' }
                     - { type: 'divider' }
