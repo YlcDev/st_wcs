@@ -3,8 +3,11 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use FOS\UserBundle\Doctrine\UserManager;
+use FOS\UserBundle\Model\User;
 use Symfony\Component\Validator\Constraints as Assert;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ArticleRepository")
@@ -17,44 +20,52 @@ class Article
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    protected $id;
 
     /**
      * @Assert\NotBlank()
      * @ORM\Column(type="string", length=255)
      */
-    private $title;
+    protected $title;
 
     /**
      * @Assert\NotBlank()
      * @ORM\Column(type="text")
      */
-    private $content;
+    protected $content;
 
     /**
      * @Assert\NotBlank()
      * @ORM\Column(type="string", length=140)
-     */
-    private $author;
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="username")
+     **/
+    protected $author;
 
     /**
      * @Assert\NotBlank()
      * @ORM\Column(type="datetime")
      */
-    private $updatedAt;
+    protected $updatedAt;
 
     /**
      * @return mixed
      * @ORM\Column(type="string")
      */
-    private $image;
+    protected $image;
 
     /**
      * @return mixed
      * @Vich\UploadableField(mapping="article_images", fileNameProperty="image")
      * @var File
      */
-    private $imageFile;
+    protected $imageFile;
+
+
+    public function __construct()
+    {
+
+        $this->updatedAt = new \DateTime();
+    }
 
     public function getId()
     {
@@ -92,16 +103,21 @@ class Article
         return $this;
     }
 
+    /**
+     * @return mixed
+     */
     public function getAuthor()
     {
         return $this->author;
+
     }
 
+    /**
+     * @param mixed $author
+     */
     public function setAuthor($author)
     {
         $this->author = $author;
-
-        return $this;
     }
 
     public function getUpdatedAt()
@@ -109,7 +125,7 @@ class Article
         return $this->updatedAt;
     }
 
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(\DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
@@ -137,4 +153,5 @@ class Article
     {
         $this->imageFile = $image;
     }
+
 }

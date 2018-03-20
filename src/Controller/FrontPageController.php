@@ -14,7 +14,6 @@ class FrontPageController extends Controller
      */
     public function index()
     {
-        // replace this line with your own code!
         return $this->render('frontpage/index.html.twig');
     }
 

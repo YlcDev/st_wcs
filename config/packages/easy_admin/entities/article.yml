@@ -13,14 +13,14 @@ easy_admin:
                     - title
                     - content
                     - { property: 'image', type: 'image', base_path: '%app.path.article_images%' }
-                    - author
-                    - updatedAt
+                    - { property: 'getAuthor', label: 'Created by A :' }
+                    - { property: 'updatedAt', format: 'j / M / Y' }
             show:
                 fields:
                     - title
                     - content
-                    - author
-                    - updatedAt
+                    - { property: 'getAuthor', label: 'Created by B :' }
+                    - { property: 'updatedAt', format: 'j / M / Y' }
                     - { property: 'image', type: 'image', base_path: '%app.path.article_images%' }
             form:
                 fields:
