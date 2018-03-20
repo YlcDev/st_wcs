@@ -9,17 +9,16 @@ easy_admin:
             label: 'Liste des articles'
             list:
                 fields:
-                    - id
                     - title
                     - content
                     - { property: 'image', type: 'image', base_path: '%app.path.article_images%' }
-                    - { property: 'user', label: 'Created by A :' }
+                    - { property: 'user', label: 'Created by :' }
                     - { property: 'updatedAt', format: 'j M Y' }
             show:
                 fields:
                     - title
                     - content
-                    - { property: 'user', label: 'Created by B :' }
+                    - { property: 'user', label: 'Created by :' }
                     - { property: 'updatedAt', format: 'j M Y' }
                     - { property: 'image', type: 'image', base_path: '%app.path.article_images%' }
             form:
@@ -28,6 +27,6 @@ easy_admin:
                     - content
                     - { property: 'imageFile', type: 'vich_image', type_options: { required: true } }
                     - { type: 'divider' }
-                    - user
+                    - { property: 'user', label: 'Created by :' }
                     - { property: 'updatedAt' }
                     - { type: 'divider' }
