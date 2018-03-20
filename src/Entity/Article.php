@@ -3,8 +3,6 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use FOS\UserBundle\Doctrine\UserManager;
-use FOS\UserBundle\Model\User;
 use Symfony\Component\Validator\Constraints as Assert;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
@@ -36,10 +34,10 @@ class Article
 
     /**
      * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=140)
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="username")
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="usernameCanonical")
+     * @ORM\JoinColumn(name="user_canonical")
      **/
-    protected $author;
+    private $user;
 
     /**
      * @Assert\NotBlank()
@@ -106,18 +104,17 @@ class Article
     /**
      * @return mixed
      */
-    public function getAuthor()
+    public function getUser()
     {
-        return $this->author;
-
+        return $this->user;
     }
 
     /**
-     * @param mixed $author
+     * @param mixed $user
      */
-    public function setAuthor($author)
+    public function setUser($user)
     {
-        $this->author = $author;
+        $this->user = $user;
     }
 
     public function getUpdatedAt()
